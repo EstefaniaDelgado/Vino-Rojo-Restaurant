@@ -1,13 +1,13 @@
-import { useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import axios from "axios";
-import "../styles/forgetpassword.css";
-import swal from "sweetalert";
+import { useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import axios from 'axios';
+import '../styles/forgetpassword.css';
+import swal from 'sweetalert';
 const ResetPassword = () => {
   const history = useNavigate();
 
   //state del input para la new password
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState('');
 
   //state de errores
   const [error, setError] = useState({});
@@ -21,7 +21,7 @@ const ResetPassword = () => {
   //handlers:
   const handlerChange = (e) => {
     e.preventDefault();
-    console.log("funciona");
+    console.log('funciona');
     setPassword(e.target.value);
     setError(validation(e.target.value));
   };
@@ -32,14 +32,21 @@ const ResetPassword = () => {
     //enviar la nueva contraseña al servidor y actualizar en la cuenta del usuario
     try {
       const api = await axios.post(
-        `${(process.env.NODE_ENV === 'development' ? 'http://localhost:3001/' : 'https://vino-rojo-bodegon-production.up.railway.app/')}login/resetpassword/${resetToken}`,
+        `${
+          process.env.NODE_ENV === 'development'
+            ? 'http://localhost:3001/'
+            : 'https://vino-rojo-restaurant-production.up.railway.app/'
+        }login/resetpassword/${resetToken}`,
         { password }
       );
 
       const response = api.data;
       console.log(response.message);
-      swal("¡SIUUUUUUU!", "tu contraseña ha sido cambiada existosamente.", "success") &&
-      history("/login");
+      swal(
+        '¡SIUUUUUUU!',
+        'tu contraseña ha sido cambiada existosamente.',
+        'success'
+      ) && history('/login');
     } catch (error) {
       console.log(error.response);
     }
@@ -49,10 +56,10 @@ const ResetPassword = () => {
   const validation = (password) => {
     let errors = {};
     if (!password) {
-      errors.password = "La contraseña es requerida.";
+      errors.password = 'La contraseña es requerida.';
     } else if (!expcontraseña.test(password)) {
       errors.password =
-        "Tu contraseña debe tener al menos 8 caracteres, con al menos una letra minúscula, una mayúscula, un dígito y un caracter especial.";
+        'Tu contraseña debe tener al menos 8 caracteres, con al menos una letra minúscula, una mayúscula, un dígito y un caracter especial.';
     }
     return errors;
   };
@@ -65,7 +72,8 @@ const ResetPassword = () => {
             <div className="login-form1">
               <h2>Cambio de contraseña.</h2>
               <p>
-                Por favor, asegurate de seleccionar una contraseña que recuerdes.
+                Por favor, asegurate de seleccionar una contraseña que
+                recuerdes.
               </p>
               <br />
               <div>
@@ -88,8 +96,8 @@ const ResetPassword = () => {
                   </p>
                   <p>
                     <button type="submit" disabled={error.password}>
-                      {" "}
-                      Cambiar{" "}
+                      {' '}
+                      Cambiar{' '}
                     </button>
                   </p>
                 </form>

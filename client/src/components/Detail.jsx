@@ -19,7 +19,7 @@ export default function Detail() {
         `${
           process.env.NODE_ENV === 'development'
             ? 'http://localhost:3001/'
-            : 'https://vino-rojo-restaurant-production.up.railway.app/'
+            : 'https://vino-rojo.onrender.com/'
         }foods/${id}`
       )
       .then(function (value) {

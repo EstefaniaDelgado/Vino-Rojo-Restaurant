@@ -52,7 +52,7 @@ function SignUp() {
       `${
         process.env.NODE_ENV === 'development'
           ? 'http://localhost:3001/'
-          : 'https://vino-rojo-restaurant-production.up.railway.app/'
+          : 'https://vino-rojo.onrender.com/'
       }login`,
       {
         method: 'POST',
@@ -71,7 +71,7 @@ function SignUp() {
         `${
           process.env.NODE_ENV === 'development'
             ? 'http://localhost:3001/'
-            : 'https://vino-rojo-restaurant-production.up.railway.app/'
+            : 'https://vino-rojo.onrender.com/'
         }email`,
         {
           method: 'POST',

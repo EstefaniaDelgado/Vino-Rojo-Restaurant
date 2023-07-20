@@ -33,8 +33,8 @@ Backend 👨🏽‍🍳:
 🖍nodemon
 </br>
 
-Frontend🧆:
 
+Frontend🧆:
 <hr>
 🖍react-router-dom
 </br>
@@ -47,7 +47,7 @@ Frontend🧆:
 🖍sweetalert
 </br>
 This project was created using react for the frontend and express for the server in the backend.
-
+</br>
 </br>
 DEPLOY 🚀:
 <hr>

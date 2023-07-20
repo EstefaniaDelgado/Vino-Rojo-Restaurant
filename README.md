@@ -6,7 +6,7 @@ CREATE PROJECT🍴:
 <hr>
 You create two folders which will content another folders with their files in order to build the proyect. For the Backend the command to start a project is npm init --y and in the Frontend is npx create-react app followed by the name of the folder where the project will be created.
 
-
+</br>
 INSTALLATION DEPENDENCIES🔧:
 <hr>
 
@@ -44,7 +44,7 @@ Frontend🧆:
 🖍redux-devtools-extension
 </br>
 🖍sweetalert
-
+</br>
 This project was created using react for the frontend and express for the server in the backend.
 
 
@@ -57,6 +57,9 @@ DEPLOY 🚀:
 ▪Render for the Backend.
 
 For more information:
+</br>
 👉https://vercel.com/docs
+</br>
 👉https://render.com/docs
+</br>
 👉https://www.mongodb.com/docs/

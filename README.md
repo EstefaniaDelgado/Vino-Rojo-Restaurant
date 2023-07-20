@@ -5,7 +5,7 @@ Project  was did  with  my team of programming during  my studies in Henry. This
 CREATE PROJECT🍴:
 <hr>
 You create two folders which will content another folders with their files in order to build the proyect. For the Backend the command to start a project is npm init --y and in the Frontend is npx create-react app followed by the name of the folder where the project will be created.
-
+</br>
 </br>
 INSTALLATION DEPENDENCIES🔧:
 <hr>
@@ -34,6 +34,7 @@ Backend 👨🏽‍🍳:
 </br>
 
 Frontend🧆:
+
 <hr>
 🖍react-router-dom
 </br>
@@ -47,7 +48,7 @@ Frontend🧆:
 </br>
 This project was created using react for the frontend and express for the server in the backend.
 
-
+</br>
 DEPLOY 🚀:
 <hr>
 ▪Vercel for the Frontend.

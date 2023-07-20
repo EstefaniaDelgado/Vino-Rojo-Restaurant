@@ -13,22 +13,36 @@ INSTALLATION DEPENDENCIES🔧:
 Backend 👨🏽‍🍳:
 <hr>
 🖍Expressjs
+</br>
 🖍moonguese
+</br>
 🖍morgan
+</br>
 🖍core
+</br>
 🖍jsonwebtoken
+</br>
 🖍bcryptjs
+</br>
 🖍mongodb
+</br>
 🖍mercado pago
+</br>
 🖍nodemailer
+</br>
 🖍nodemon
+</br>
 
 Frontend🧆:
 <hr>
 🖍react-router-dom
+</br>
 🖍redux
+</br>
 🖍redux-thunk
+</br>
 🖍redux-devtools-extension
+</br>
 🖍sweetalert
 
 This project was created using react for the frontend and express for the server in the backend.
@@ -37,7 +51,9 @@ This project was created using react for the frontend and express for the server
 DEPLOY 🚀:
 <hr>
 ▪Vercel for the Frontend.
+</br>
 ▪Mongo Atlas.
+</br>
 ▪Render for the Backend.
 
 For more information:

@@ -31,7 +31,6 @@ Backend 👨🏽‍🍳:
 🖍nodemailer
 </br>
 🖍nodemon
-</br>
 
 
 Frontend🧆:

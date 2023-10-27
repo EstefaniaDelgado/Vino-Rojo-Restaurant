@@ -9,7 +9,8 @@ import './index.css';
 import 'remixicon/fonts/remixicon.css';
 import 'animate.css/animate.min.css';
 
-axios.defaults.baseURL = "http://localhost:3001";
+// axios.defaults.baseURL = "http://localhost:3001";
+axios.defaults.baseURL= "https://vino-rojo-restaurant-production.up.railway.app";
 
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));

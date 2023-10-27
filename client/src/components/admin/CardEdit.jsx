@@ -41,7 +41,7 @@ export default function CardEdit() {
         `${
           process.env.NODE_ENV === 'development'
             ? 'http://localhost:3001/'
-            : 'https://vino-rojo.onrender.com/'
+            : 'vino-rojo-restaurant-production.up.railway.app'
         }foods/${id}`
       )
       .then(function (value) {
@@ -61,7 +61,7 @@ export default function CardEdit() {
         `${
           process.env.NODE_ENV === 'development'
             ? 'http://localhost:3001/'
-            : 'https://vino-rojo.onrender.com/'
+            : 'vino-rojo-restaurant-production.up.railway.app'
         }foods/edit/${id}`,
         {
           name: food.name,

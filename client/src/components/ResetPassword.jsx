@@ -35,7 +35,7 @@ const ResetPassword = () => {
         `${
           process.env.NODE_ENV === 'development'
             ? 'http://localhost:3001/'
-            : 'vino-rojo-restaurant-production.up.railway.app'
+            : 'https://vino-rojo-restaurant-production.up.railway.app'
         }login/resetpassword/${resetToken}`,
         { password }
       );

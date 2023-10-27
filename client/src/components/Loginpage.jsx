@@ -42,7 +42,7 @@ function Login() {
         `${
           process.env.NODE_ENV === 'development'
             ? 'http://localhost:3001/'
-            : 'vino-rojo-restaurant-production.up.railway.app'
+            : 'https://vino-rojo-restaurant-production.up.railway.app'
         }login/signin`,
         formData
       );
@@ -93,7 +93,7 @@ function Login() {
           `${
             process.env.NODE_ENV === 'development'
               ? 'http://localhost:3001/'
-              : 'vino-rojo-restaurant-production.up.railway.app'
+              : 'https://vino-rojo-restaurant-production.up.railway.app'
           }login/sensibleInformation/${formData.email}`,
           config
         );

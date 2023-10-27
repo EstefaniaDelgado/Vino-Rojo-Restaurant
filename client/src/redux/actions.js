@@ -60,7 +60,7 @@ export function editFood(id, foodEditada) {
         `${
           process.env.NODE_ENV === 'development'
             ? 'http://localhost:3001/'
-            : 'https://vino-rojo-restaurant-production.up.railway.app'
+            : 'vino-rojo-restaurant-production.up.railway.app'
         }foods/edit/${id}`,
         foodEditada
       );

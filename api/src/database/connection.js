@@ -6,13 +6,13 @@ const DEPLOY_DB= process.env.DEPLOY_DB;
 /////conexion a mongoose/////
 mongoose.set('strictQuery', true);
 
-const connection = mongoose.connect(URL,{
+const connection = mongoose.connect(DEPLOY_DB,{
     useNewUrlParser: true, 
     useUnifiedTopology: true,
 });
 
 mongoose.connection.on('connected', () => {
-    console.log('[Mongoose] - Conectado a MongoDB', URL);
+    console.log('[Mongoose] - Conectado a MongoDB');
 });
 mongoose.connection.on('error',(error)=>{
     console.log('[Mongoose]-Error:',error);

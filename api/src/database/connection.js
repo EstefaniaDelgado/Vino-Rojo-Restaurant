@@ -12,7 +12,7 @@ const connection = mongoose.connect(URL,{
 });
 
 mongoose.connection.on('connected', () => {
-    console.log('[Mongoose] - Conectado a MongoDB');
+    console.log('[Mongoose] - Conectado a MongoDB', URL);
 });
 mongoose.connection.on('error',(error)=>{
     console.log('[Mongoose]-Error:',error);

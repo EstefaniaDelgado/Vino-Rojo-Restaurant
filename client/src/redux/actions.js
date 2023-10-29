@@ -23,9 +23,11 @@ export const VERIFY_ADMIN = 'VERIFY_ADMIN';
 export const getFoods = () => {
   return async (dispatch) => {
     try {
+      console.log(process.env.NODE_ENV)
       let data = await axios.get(
         `${
           process.env.NODE_ENV === 'development'
+          
             ? 'http://localhost:3001/'
             : 'https://vino-rojo-restaurant-production.up.railway.app'
         }foods`

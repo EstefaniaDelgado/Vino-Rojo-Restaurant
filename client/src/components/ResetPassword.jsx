@@ -35,7 +35,7 @@ const ResetPassword = () => {
         `${
           process.env.NODE_ENV === 'development'
             ? 'http://localhost:3001/'
-            : 'https://vino-rojo-restaurant-back.vercel.app'
+            : 'https://vino-rojo-restaurant-back.vercel.app/'
         }login/resetpassword/${resetToken}`,
         { password }
       );

@@ -50,7 +50,7 @@ const EditProfile = () => {
         `${
           process.env.NODE_ENV === 'development'
             ? 'http://localhost:3001/'
-            : 'https://vino-rojo-restaurant-back.vercel.app'
+            : 'https://vino-rojo-restaurant-back.vercel.app/'
         }login/update/${id}`,
         data
       );
@@ -158,7 +158,7 @@ export default EditProfile;
 //     e.preventDefault();
 //     try {
 //       const data = { name, imageUrl };
-//       const response = await axios.post(`${(process.env.NODE_ENV === 'development' ? 'http://localhost:3001/' : 'https://vino-rojo-restaurant-back.vercel.app')}login/update/${id}`, data);
+//       const response = await axios.post(`${(process.env.NODE_ENV === 'development' ? 'http://localhost:3001/' : 'https://vino-rojo-restaurant-back.vercel.app/')}login/update/${id}`, data);
 //       const user = response.data;
 //       localStorage.setItem("name", user.name);
 //       history("/profile");

@@ -42,7 +42,7 @@ function Login() {
         `${
           process.env.NODE_ENV === 'development'
             ? 'http://localhost:3001/'
-            : 'https://vino-rojo-restaurant-back.vercel.app'
+            : 'https://vino-rojo-restaurant-back.vercel.app/'
         }login/signin`,
         formData
       );
@@ -93,7 +93,7 @@ function Login() {
           `${
             process.env.NODE_ENV === 'development'
               ? 'http://localhost:3001/'
-              : 'https://vino-rojo-restaurant-back.vercel.app'
+              : 'https://vino-rojo-restaurant-back.vercel.app/'
           }login/sensibleInformation/${formData.email}`,
           config
         );

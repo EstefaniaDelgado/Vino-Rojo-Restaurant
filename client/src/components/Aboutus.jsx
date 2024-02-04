@@ -87,14 +87,14 @@ export default function Aboutus() {
           <h2 className="titleAbout">Estefania Delgado</h2>
           <p className="copy">Description</p>
           <a
-            href="https://www.linkedin.com/in/sebasti%C3%A1n-grajales-morales-14a277212/"
+            href="https://www.linkedin.com/in/estefania-delgado-hoyos/"
             target="blank"
           >
             <button className="btn1">LinkedIn</button>
           </a>
 
           <a
-            href="https://www.linkedin.com/in/sebasti%C3%A1n-grajales-morales-14a277212/"
+            href="https://github.com/EstefaniaDelgado"
             target="blank"
           >
             <button className="btn2">Github</button>

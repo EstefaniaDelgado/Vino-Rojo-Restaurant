@@ -6,7 +6,7 @@ const DEPLOY_DB= process.env.DEPLOY_DB;
 /////conexion a mongoose/////
 mongoose.set('strictQuery', true);
 
-const connection = mongoose.connect(DEPLOY_DB,{
+const connection = mongoose.connect(URL,{
     useNewUrlParser: true, 
     useUnifiedTopology: true,
 });

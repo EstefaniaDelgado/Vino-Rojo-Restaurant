@@ -32,7 +32,7 @@ export default function CardAdmin({ food }) {
                 `${
                   process.env.NODE_ENV === 'development'
                     ? 'http://localhost:3001/'
-                    : 'https://vino-rojo-restaurant-production.up.railway.app'
+                    : 'https://vino-rojo-restaurant-back.vercel.app'
                 }foods/disableFood/${food._id}`
               )
             }
@@ -50,7 +50,7 @@ export default function CardAdmin({ food }) {
                 `${
                   process.env.NODE_ENV === 'development'
                     ? 'http://localhost:3001/'
-                    : 'https://vino-rojo-restaurant-production.up.railway.app'
+                    : 'https://vino-rojo-restaurant-back.vercel.app'
                 }foods/ableFood/${food._id}`
               )
             }

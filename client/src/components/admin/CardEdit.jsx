@@ -41,7 +41,7 @@ export default function CardEdit() {
         `${
           process.env.NODE_ENV === 'development'
             ? 'http://localhost:3001/'
-            : 'https://vino-rojo-restaurant-production.up.railway.app'
+            : 'https://vino-rojo-restaurant-back.vercel.app'
         }foods/${id}`
       )
       .then(function (value) {
@@ -61,7 +61,7 @@ export default function CardEdit() {
         `${
           process.env.NODE_ENV === 'development'
             ? 'http://localhost:3001/'
-            : 'https://vino-rojo-restaurant-production.up.railway.app'
+            : 'https://vino-rojo-restaurant-back.vercel.app'
         }foods/edit/${id}`,
         {
           name: food.name,

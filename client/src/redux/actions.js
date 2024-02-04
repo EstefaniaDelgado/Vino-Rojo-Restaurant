@@ -18,18 +18,17 @@ export const CART_DOWN = 'CART_DOWN';
 export const GET_ABLE_FOOD = 'GET_ABLE_FOOD';
 export const VERIFY_ADMIN = 'VERIFY_ADMIN';
 
-//RUTA RAILWAY: ${(process.env.NODE_ENV === 'development' ? 'http://localhost:3001/' : 'https://vino-rojo-restaurant-production.up.railway.app')}foods
+//RUTA RAILWAY: ${(process.env.NODE_ENV === 'development' ? 'http://localhost:3001/' : 'https://vino-rojo-restaurant-back.vercel.app')}foods
 
 export const getFoods = () => {
   return async (dispatch) => {
     try {
-      console.log(process.env.NODE_ENV)
+      console.log(process.env.NODE_ENV);
       let data = await axios.get(
         `${
           process.env.NODE_ENV === 'development'
-          
             ? 'http://localhost:3001/'
-            : 'https://vino-rojo-restaurant-production.up.railway.app'
+            : 'https://vino-rojo-restaurant-back.vercel.app'
         }foods`
       );
       return dispatch({ type: GET_FOODS, payload: data.data });
@@ -45,7 +44,7 @@ export function getUser(id) {
       `${
         process.env.NODE_ENV === 'development'
           ? 'http://localhost:3001/'
-          : 'https://vino-rojo-restaurant-production.up.railway.app'
+          : 'https://vino-rojo-restaurant-back.vercel.app'
       }login/customers/${id}`
     );
     console.log(user.data);
@@ -81,7 +80,7 @@ export function postFood(payload) {
       `${
         process.env.NODE_ENV === 'development'
           ? 'http://localhost:3001/'
-          : 'https://vino-rojo-restaurant-production.up.railway.app'
+          : 'https://vino-rojo-restaurant-back.vercel.app'
       }foods.routes`,
       payload
     );
@@ -98,7 +97,7 @@ export function foodTypes(payload) {
       `${
         process.env.NODE_ENV === 'development'
           ? 'http://localhost:3001/'
-          : 'https://vino-rojo-restaurant-production.up.railway.app'
+          : 'https://vino-rojo-restaurant-back.vercel.app'
       }filters/${payload}`
     );
     dispatch({
@@ -114,7 +113,7 @@ export function priceMintoMax() {
       `${
         process.env.NODE_ENV === 'development'
           ? 'http://localhost:3001/'
-          : 'https://vino-rojo-restaurant-production.up.railway.app'
+          : 'https://vino-rojo-restaurant-back.vercel.app'
       }filters/priceMinMax`
     );
     dispatch({
@@ -130,7 +129,7 @@ export function priceMaxtoMin() {
       `${
         process.env.NODE_ENV === 'development'
           ? 'http://localhost:3001/'
-          : 'https://vino-rojo-restaurant-production.up.railway.app'
+          : 'https://vino-rojo-restaurant-back.vercel.app'
       }filters/priceMaxMin`
     );
     dispatch({
@@ -147,7 +146,7 @@ export function getFoodsByName(name) {
         `${
           process.env.NODE_ENV === 'development'
             ? 'http://localhost:3001/'
-            : 'https://vino-rojo-restaurant-production.up.railway.app'
+            : 'https://vino-rojo-restaurant-back.vercel.app'
         }foods?name=${name}`
       );
       dispatch({
@@ -173,7 +172,7 @@ export function cartAdd(payload) {
         `${
           process.env.NODE_ENV === 'development'
             ? 'http://localhost:3001/'
-            : 'https://vino-rojo-restaurant-production.up.railway.app'
+            : 'https://vino-rojo-restaurant-back.vercel.app'
         }/login/updateCart/${id}`,
         payload
       );
@@ -222,7 +221,7 @@ export function getAbleFood() {
       `${
         process.env.NODE_ENV === 'development'
           ? 'http://localhost:3001/'
-          : 'https://vino-rojo-restaurant-production.up.railway.app'
+          : 'https://vino-rojo-restaurant-back.vercel.app'
       }foods/able`
     );
     dispatch({
@@ -240,7 +239,7 @@ export function verifyAdmin() {
         `${
           process.env.NODE_ENV === 'development'
             ? 'http://localhost:3001/'
-            : 'https://vino-rojo-restaurant-production.up.railway.app'
+            : 'https://vino-rojo-restaurant-back.vercel.app'
         }login/verifyAdmin/${token}`
       );
       if (dispatch) {

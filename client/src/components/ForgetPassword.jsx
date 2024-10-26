@@ -39,7 +39,7 @@ function Forgetpassword() {
         `${
           process.env.NODE_ENV === 'development'
             ? 'http://localhost:3001/'
-            : 'https://vino-rojo-restaurant-back.vercel.app/'
+            : 'https://vino-rojo-restaurant.onrender.com'
         }login/forgetpassword`,
         { email }
       );
@@ -50,7 +50,7 @@ function Forgetpassword() {
           `${
             process.env.NODE_ENV === 'development'
               ? 'http://localhost:3001/'
-              : 'https://vino-rojo-restaurant-back.vercel.app/'
+              : 'https://vino-rojo-restaurant.onrender.com'
           }email/reset/${resetToken}`,
           { semail }
         );

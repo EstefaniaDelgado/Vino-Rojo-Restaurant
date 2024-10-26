@@ -52,7 +52,7 @@ function SignUp() {
       `${
         process.env.NODE_ENV === 'development'
           ? 'http://localhost:3001/'
-          : 'https://vino-rojo-restaurant-back.vercel.app/'
+          : 'https://vino-rojo-restaurant.onrender.com'
       }login`,
       {
         method: 'POST',
@@ -71,7 +71,7 @@ function SignUp() {
         `${
           process.env.NODE_ENV === 'development'
             ? 'http://localhost:3001/'
-            : 'https://vino-rojo-restaurant-back.vercel.app/'
+            : 'https://vino-rojo-restaurant.onrender.com'
         }email`,
         {
           method: 'POST',

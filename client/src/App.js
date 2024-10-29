@@ -18,7 +18,7 @@ import SobreNos from './components/SobreNos';
 import CardEdit from './components/admin/CardEdit';
 
 function App() {
-  return (<>
+  return (<div className='min-h-screen md:flex md:flex-col'>
     <Navbar/>
       <Routes>
         
@@ -55,7 +55,7 @@ function App() {
 
       </Routes>
     <Footer/>
-  </>);
+  </div>);
 }
  
 

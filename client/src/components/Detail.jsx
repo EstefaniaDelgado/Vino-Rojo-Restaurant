@@ -9,22 +9,34 @@ import { Link } from 'react-router-dom';
 export default function Detail() {
   let { id } = useParams();
   let [food, setfood] = useState([]);
+  const[isLoading, setIsLoading]=useState(true);
   const dispatch = useDispatch();
+
+  console.log(food)
 
   //Un get aca??? no deberias usar los actions?
   useEffect(() => {
     // eslint-disable-next-line
-    const food = axios
-      .get(
-        `${
-          process.env.NODE_ENV === 'development'
-            ? 'http://localhost:3001/'
-            : 'https://vino-rojo-restaurant.onrender.com/'
-        }foods/${id}`
-      )
-      .then(function (value) {
-        setfood(value.data);
-      });
+    const getFoodDetail = async () => {
+      try {
+        setIsLoading(true)
+        const api = await axios.get(
+          `${
+            process.env.NODE_ENV === 'development'
+              ? 'http://localhost:3001/'
+              : 'https://vino-rojo-restaurant.onrender.com/'
+          }foods/${id}`
+        );
+       
+        const response = await api.data;
+         setfood(response)
+      } catch (error) {
+        console.log("Ha ocurrido un error", error)
+      }finally{
+        setIsLoading(false)
+      }
+    };
+    getFoodDetail();
     // eslint-disable-next-line
   }, []);
 
@@ -35,44 +47,42 @@ export default function Detail() {
 
   //"w-[750px] h-[350px] bg-white shadow-[0_8px_16px_-8px_rgba(0,0,0,0.4)] rounded-[30px] relative text-center hover:w-100% flex block"
   return (
-    <div className="">
-      <div></div>
-
+    <div className='py-5 flex-1 flex flex-col justify-center'>
       {/**Card */}
-      <div className="w-100% m-5 flex justify-center">
-        <div className="w-[80%] sm:w-[90%] bg-white flex flex-col sm:flex sm:flex-row md:flex md:flex-row rounded-lg drop-shadow-2xl">
-          <div className="">
-            <img
-              className="rounded-lg sm:w-[450px] sm:h-[100%] lg:w-[500px] lg:h-[350px]"
+      <div className="h-full flex justify-center items-center lg:mb-20 ">
+        <div className="w-10/12 max-w-[320px] mx-auto flex flex-col items-center rounded-md bg-white md:flex-row md:max-w-none md:rounded-bl-md  lg:max-w-[680px] ">
+          <div className="h-[150px] w-full rounded-md flex flex-col justify-center md:h-[178px] md:flex-1 md:rounded-bl-md">
+           {isLoading ? <p className='text-center'>Cargando Imagen..</p> :  <img
+              className={`rounded-t-md w-full h-full object-center ${food.type === 'Vinos' ? 'object-contain': 'object-cover'} md:rounded-bl-md md:rounded-tr-none`}
               src={food.image}
               alt="product_image"
-            />
+            />}
           </div>
 
-          <div className=" m-5 flex flex-col w-[80%]">
+          <div className="m-2 flex-[2]">
             <div className="text-2xl grid justify-items-center underline underline-offset-4 font-bold text-center">
               <h1 className=" animate__animated animate__pulse animate__infinite	infinite  animate__delay-3s">
                 {food.name}
               </h1>
             </div>
 
-            <div className=" h-[60%] m-6 p-5 flex justify-center ">
+            <div className=" h-[60%] py-4 px-3 flex justify-center ">
               <span className="tracking-wide text-center">
                 {food.description}
               </span>
             </div>
 
-            <div className="flex justify-around sm:flex-wrap gap-3 p-3">
-              <div>
+            <div className="flex justify-around items-center sm:flex-wrap gap-3 p-2">
+              <div className='flex-1 flex justify-center'>
                 <Link to={'/'}>
-                  <button className="text-white bg-[#720f10] hover:bg-[#c51b1e] p-[5px] rounded-lg mr-2">
+                  <button className="text-white bg-[#720f10] hover:bg-[#c51b1e] p-[5px] rounded-lg ">
                     Seguir Comprando
                   </button>
                 </Link>
               </div>
 
-              <div className="flex">
-                <div className="bg-[#720f10] rounded-full text-white grid content-center mr-3 px-2 ">
+              <div className="flex justify-around flex-1">
+                <div className="bg-[#720f10] rounded-full text-white grid content-center px-2 ">
                   ${food.price}
                 </div>
 
@@ -95,7 +105,7 @@ export default function Detail() {
       </div>
 
       {/* STAR */}
-      <div className="hidden animate__animated animate__lightSpeedInLeft  animate__delay-2s">
+      <div className="hidden animate__animated animate__lightSpeedInLeft  animate__delay-2">
         <form action="#" className="container-star ">
           <div className="post">
             <div className="text">Gracias por tu calificacion!</div>
